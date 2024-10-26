@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './styles/App.css';
-import logo from './logo.png';
 import CarouselComponent from './components/CarouselComponent';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App({token, setToken}) {
   const [username, setUsername] = useState('');
@@ -29,36 +30,26 @@ function App({token, setToken}) {
 
   return (
     <div className="App">
-      <Helmet>
-        <title>МастерЛаб - открывай науку шаг за шагом!</title>
-      </Helmet>
-      <header className="App-header">
-        <div className="container">
-          <div className="logo">
-            <a href="/">
-              <img src={logo} alt="Логотип" className="logo"></img>
-            </a>
-          </div>
-          <nav>
-            <ul class="nav-links">
-              <Link to="/" className="nav-link">ГЛАВНАЯ</Link>
-              <Link to="/news" className="nav-link">НОВОСТИ</Link>
-              <Link to="/about" className="nav-link">О НАС</Link>
-              <Link to="/experiments" className="nav-link">ЭКСПЕРИМЕНТЫ</Link>
-            </ul>
-          </nav>
-          <div class="login">
-            {token ? (
-              <><span className = "username">Привет, {username}!</span>
-              <button className='login-btn' onClick={handleLogout}><b>ВЫЙТИ</b></button></>
-            ) : (
-            <Link to="/login">
-                <button class="login-btn"><b>ВХОД / РЕГИСТРАЦИЯ</b></button>
-            </Link>
-            )}
-          </div>
+      <div className="fade-in">
+        <Helmet>
+          <title>МастерЛаб - открывай науку шаг за шагом!</title>
+        </Helmet>
+        <Header />
+        <CarouselComponent />
+        <div className="content">
+          <h1 align = "center">Мы рады приветствовать Вас в онлайн-сборнике научных экспериментов “МастерЛаб”!</h1>
+          <p>
+            <div className="row">
+              <p align="center">Наше веб-приложение предлагает коллекцию тщательно подобранных экспериментов, которые подойдут как для школьников и студентов, так и для преподавателей и любителей науки.</p>
+              <p align="center">Здесь вы найдете простые и интересные эксперименты, которые можно провести в домашних условиях или в учебных лабораториях, а также подробные описания методик и пошаговые инструкции для успешного выполнения каждого опыта.</p>
+            </div>
+          </p>
+          <p align = "center">
+            <em><b>Исследуйте, экспериментируйте и открывайте новые горизонты знаний вместе с нами!</b></em>
+          </p>
         </div>
-      </header>
+        <Footer />
+      </div>
     </div>
   );
 }

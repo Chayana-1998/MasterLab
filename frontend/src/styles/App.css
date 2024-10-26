@@ -63,8 +63,8 @@ header{
 }
 
 .login-btn {
-  background-color: #66bb6a;
-  color: #ffffff;
+  background-color: #4743B9;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -74,5 +74,99 @@ header{
 }
 
 .login-btn:hover {
-  background-color: #3c7b3c;
+  background-color: #221f6d;
+}
+
+/*Красивое появление заголовка и т.д.*/
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20px); /* Задает начальное положение чуть выше */
+  animation: fadeIn 1.5s ease forwards; /* Запускает анимацию */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Смещает элемент в начальное положение */
+  }
+}
+
+/*КАРУСЕЛЬ*/
+
+/* Стиль по умолчанию */
+.carousel {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Адаптация при масштабе 175% (приблизительно 1.75x) и выше */
+@media (min-resolution: 168dpi) {
+  .carousel {
+    max-height: 80vh;
+  }
+  .carousel img {
+    min-height: 400px;
+  }
+}
+
+/* Адаптация при масштабе 200% (приблизительно 2x) и выше */
+@media (min-resolution: 192dpi) {
+  .carousel {
+    max-height: 70vh;
+  }
+  .carousel img {
+    min-height: 300px;
+  }
+}
+
+/* Адаптация при масштабе 250% (приблизительно 2.5x) и выше */
+@media (min-resolution: 240dpi) {
+  .carousel {
+    max-height: 60vh;
+  }
+  .carousel img {
+    min-height: 200px;
+  }
+}
+
+/*КОНТЕНТ*/
+
+.content{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 200px 0 200px;
+}
+.content h1{
+  padding-bottom: 20px;
+}
+.content p{
+  font-size: 30px;
+}
+
+.footer{
+  background-color: #4743B9; /* Цвет фона */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer a{
+  color: white;
+}
+.mail-to{
+  color: white;
+  min-width: 500px;
+}
+.qa{
+  font-size: 25px;
 }
