@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './styles/App.css';
 import CarouselComponent from './components/CarouselComponent';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
