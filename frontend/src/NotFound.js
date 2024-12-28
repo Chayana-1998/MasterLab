@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import notfound from './components/404.png'
 import { Helmet } from 'react-helmet';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function NotFound({ token, setToken }) {
 
@@ -36,6 +37,7 @@ function NotFound({ token, setToken }) {
       </Helmet>
       <Header token={token} username={username} handleLogout={handleLogout} />
         <img className = "not-found-img" src = {notfound}></img>
+		<Footer />
     </div>
   );
 } 

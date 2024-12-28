@@ -4,7 +4,7 @@ const path = require('path');
 // Настройка хранилища multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './backend/uploads');
+        cb(null, './uploads');
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + path.extname(file.originalname)); // уникальное имя файла
