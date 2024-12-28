@@ -542,6 +542,86 @@ margin-top: 0;
   background-color: #f1f1f1;
 }
 
+/*КОММЕНТАРИИ*/
+
+/* Основной контейнер */
+.comments-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Текстовое поле для добавления комментария */
+.comments-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: vertical;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Кнопка для отправки комментария */
+.comments-section .login-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.comments-section .login-btn:hover {
+  background-color: #45a049;
+}
+
+/* Текст уведомления для незарегистрированных пользователей */
+.comments-section p {
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+}
+
+/* Список комментариев */
+.comments-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Элемент списка комментариев */
+.comments-section li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comments-section li p {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Дата комментария */
+.comments-section .commentDate {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
 /*ПРОЧЕЕ*/
 
 .not-found-img{

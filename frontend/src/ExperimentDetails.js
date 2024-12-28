@@ -70,7 +70,7 @@ function ExperimentDetails({ token, setToken }) {
               <ol>
                 <li><a href="#description">Описание</a></li>
                 <li><a href="#instructions">Инструкции</a></li>
-                <li><a href="#comments">Комментарии к рецепту</a></li>
+                <li><a href="#comments">Комментарии к эксперименту</a></li>
                 <br></br>
               </ol>
             </div>
@@ -88,7 +88,7 @@ function ExperimentDetails({ token, setToken }) {
               </ol>
             </div>
             <div className="experiment-comments">
-              <h2 id="comments">Комментарии к рецепту</h2>
+              <h2 id="comments">Комментарии к эксперименту</h2>
               <Comments experimentId={id} token={token} />
             </div>
           </div>
