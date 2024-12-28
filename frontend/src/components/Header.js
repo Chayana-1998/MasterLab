@@ -1,8 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './logo.png';
 
 const Header = ({ token, username, handleLogout }) => {
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+      setIsDropdownOpen(prev => !prev);
+  };
+
+  // Закрытие выпадающего меню при клике вне его
+  useEffect(() => {
+      const handleClickOutside = (event) => {
+          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+              setIsDropdownOpen(false);
+          }
+      };
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+      };
+  }, []);
+
     return (
       <header className="App-header">
         <div className="container">
@@ -21,10 +42,16 @@ const Header = ({ token, username, handleLogout }) => {
           </nav>
           <div className="login">
             {token ? (
-              <>
-                <span className="username">Привет, {username}!</span>
-                <button className="login-btn" onClick={handleLogout}><b>ВЫЙТИ</b></button>
-              </>
+              <div className="dropdown" ref={dropdownRef}>
+              <span className="username" onClick={toggleDropdown}>👋 Привет, {username}!</span>
+              {isDropdownOpen && (
+                <div className="dropdown-menu">
+                  <Link to="/settings" className="dropdown-item">Настройки пользователя</Link>
+                  <Link to="/my-experiments" className="dropdown-item">Мои эксперименты</Link>
+                  <button className="dropdown-item" onClick={handleLogout}>Выйти</button>
+                </div>
+              )}
+            </div>
             ) : (
               <Link to="/login">
                 <button className="login-btn"><b>ВХОД / РЕГИСТРАЦИЯ</b></button>

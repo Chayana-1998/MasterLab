@@ -17,13 +17,13 @@ function Experiments({ token, setToken }) {
 
   useEffect(() => {
     const fetchExperiments = async () => {
-      const response = await axios.get('http://localhost:7777/experiments');
+      const response = await axios.get('http://localhost:1234/experiments');
       setExperiments(response.data);
     };
 
     // Функция для получения количества экспериментов
     const fetchExperimentCount = async () => {
-      const response = await fetch('http://localhost:7777/experiments/count');
+      const response = await fetch('http://localhost:1234/experiments/count');
       const data = await response.json();
       setExperimentCount(data.count);
     };
@@ -57,7 +57,7 @@ function Experiments({ token, setToken }) {
       <Helmet>
         <title>МастерЛаб — Эксперименты</title>
       </Helmet>
-      <Header />
+      <Header token={token} username={username} handleLogout={handleLogout} />
 
       <div align="center" className="content">
 			   <h1 align = "center">Эксперименты</h1>
@@ -68,14 +68,14 @@ function Experiments({ token, setToken }) {
           <br></br>
                <p align="center">Найдено — {experimentCount}</p>
           <br></br>
-          <div className="recipe-grid">
+          <div className="experiment-grid">
             {experiments.map(experiment => (
-                <div className="recipe-card" key={experiment._id}>
-                    <Link to={`/experiments/${experiment._id}`} className="recipe-link">
-                        <h1 className="recipe-title">{experiment.title}</h1>
+                <div className="experiment-card" key={experiment._id}>
+                    <Link to={`/experiments/${experiment._id}`} className="experiment-link">
+                        <h1 className="experiment-title">{experiment.title}</h1>
                     </Link>
-                    {experiment.imageUrl && <img src={`http://localhost:7777${experiment.imageUrl}`} alt={experiment.title} className="recipe-image" />}
-                    <div className="recipe-info">
+                    {experiment.imageUrl && <img src={`http://localhost:1234${experiment.imageUrl}`} alt={experiment.title} className="experiment-image" />}
+                    <div className="experiment-info">
                         <p><strong>Автор:</strong> {experiment.username}</p>
                         <p><strong>Дата добавления:</strong> {new Date(experiment.dateAdded).toLocaleDateString()}</p>
                     </div>

@@ -33,7 +33,7 @@ function News({ token, setToken }) {
 
   useEffect(() => {
     // Получение новостей с сервера
-    axios.get('http://localhost:7777/news')
+    axios.get('http://localhost:1234/news')
         .then(response => {
             console.log(response.data); // Добавьте это, чтобы проверить данные
             setNews(response.data);
@@ -48,7 +48,7 @@ function News({ token, setToken }) {
       <Helmet>
         <title>МастерЛаб — Новости</title>
       </Helmet>
-      <Header />
+      <Header token={token} username={username} handleLogout={handleLogout} />
 
     <div className="content">
         <h1 align="center">Новости</h1>

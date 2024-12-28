@@ -32,7 +32,7 @@ function About({token, setToken}) {
         <Helmet>
           <title>МастерЛаб - О нас</title>
         </Helmet>
-        <Header />
+        <Header token={token} username={username} handleLogout={handleLogout} />
         <CarouselComponent />
         <div className="content">
           <h1 align = "center">О нас</h1>

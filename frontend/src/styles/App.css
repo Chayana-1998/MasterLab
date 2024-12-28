@@ -170,3 +170,383 @@ header{
 .qa{
   font-size: 25px;
 }
+
+/*ФОРМЫ*/
+
+.content-form{
+  background-color: white;
+  border-radius: 15px;
+
+  margin: 0 300px 50px 300px;
+}
+
+.forma {
+  margin: 0 0 20px 0;
+  display:inline-block;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow:hidden;
+}
+.auth_style{
+  font-size:25px;
+  border-radius: 10px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+.login-container button{
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  width: 100%;
+  padding: 0.75rem;
+}
+.login-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.55rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  max-width: 380px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/*КАРТОЧКИ С ЭКСПЕРИМЕНТАМИ*/
+
+.experiment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.experiment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  max-width: 300px;
+  width: 100%;
+}
+
+.experiment-card:hover {
+  transform: translateY(-10px);
+}
+
+.experiment-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.experiment-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 16px;
+  text-align: center;
+}
+
+.experiment-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.experiment-info {
+  padding: 16px;
+  color: #555;
+}
+
+.experiment-info p {
+  margin: 8px 0;
+}
+
+.experiment-info strong {
+  color: #333;
+}
+
+/*ДЕТАЛИ РЕЦЕПТА*/
+
+.experiment-details-container {
+max-width: 800px;
+margin: 20px auto;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experiment-title {
+font-size: 2.5rem;
+color: #333;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.experiment-meta {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+margin-bottom: 20px;
+font-size: 0.9rem;
+color: #555;
+}
+
+.experiment-meta > div {
+margin-bottom: 10px;
+}
+
+.experiment-detail-image {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+.menu2 {
+background-color: #f1f1f1;
+padding: 10px;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+.menu2 p {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+.menu2 ol {
+list-style: none;
+padding-left: 0;
+}
+
+.menu2 li {
+margin-bottom: 10px;
+}
+
+.menu2 a {
+text-decoration: none;
+color: #007bff;
+transition: color 0.3s;
+}
+
+.menu2 a:hover {
+color: #0056b3;
+}
+
+.experiment-description,
+.experiment-ingredients,
+.experiment-instructions,
+.experiment-comments {
+margin-bottom: 20px;
+}
+
+.experiment-description p,
+.experiment-ingredients ul,
+.experiment-instructions ol {
+margin: 0;
+padding-left: 20px;
+line-height: 1.6;
+color: #555;
+}
+
+.experiment-ingredients ul {
+list-style: disc;
+}
+
+.experiment-instructions ol {
+list-style: decimal;
+}
+
+.experiment-comments {
+padding: 20px;
+background-color: #ffffff;
+border-radius: 5px;
+}
+
+.experiment-comments h2 {
+margin-top: 0;
+}
+
+/*НОВОСТИ*/
+
+/* Стили для списка новостей */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.news-link{
+  text-decoration: none;
+  color: inherit;
+}
+/* Стили для отдельного элемента новости */
+.news-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-item h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+
+}
+
+.news-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 20px 20px;
+}
+
+.news-item em {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.news-item .news-content {
+  padding: 20px;
+}
+
+/*ДЕТАЛИ НОВОСТИ*/
+
+.news-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.news-detail p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.news-detail em {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #888;
+  text-align: right;
+}
+
+/*Выпадающее меню в профиле*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.username {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 150px;
+}
+
+.dropdown-item {
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/*ПРОЧЕЕ*/
+
+.not-found-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+}

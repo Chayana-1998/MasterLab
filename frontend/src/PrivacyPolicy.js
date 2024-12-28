@@ -34,7 +34,7 @@ function PrivacyPolicy({ token, setToken }) {
       <Helmet>
         <title>МастерЛаб — Политика конфиденциальности</title>
       </Helmet>
-      <Header />
+      <Header token={token} username={username} handleLogout={handleLogout} />
 
       <div className="content">
 <p align = "justify">

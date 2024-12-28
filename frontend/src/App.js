@@ -33,7 +33,7 @@ function App({token, setToken}) {
         <Helmet>
           <title>МастерЛаб - открывай науку шаг за шагом!</title>
         </Helmet>
-        <Header />
+        <Header token={token} username={username} handleLogout={handleLogout} />
         <CarouselComponent />
         <div className="content">
           <h1 align = "center">Мы рады приветствовать Вас в онлайн-сборнике научных экспериментов “МастерЛаб”!</h1>
