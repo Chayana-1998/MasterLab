@@ -16,7 +16,7 @@ const NewsSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: new Date() // ИСПРАВИТЬ ЭТОТ БАГ!!!
+        default: Date.now
     }
 });
 
